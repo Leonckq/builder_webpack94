@@ -10,7 +10,7 @@
     "html-webpack-plugin": "^4.3.0",
     "ignore-loader": "^0.1.2",
     "postcss-loader": "^3.0.0",
-    "px2rem-loader": "^0.1.9",
+    "px2rem-loader": "^0.1.9"
   },
   "scripts": {
     "start": "npx webpack --progress --colors --config ./lib/webpack.base.js",
