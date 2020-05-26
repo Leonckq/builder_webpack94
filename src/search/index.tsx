@@ -6,7 +6,6 @@ import React, { PureComponent } from 'react'
 import ReactDOM from 'react-dom'
 import { module } from './../common/common'
 // import img from './../images/1.png'
-// import Search from '../search/index.jsx'
 type Props = {
   num: number
 }
