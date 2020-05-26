@@ -43,7 +43,6 @@ class App extends PureComponent<Props, State> {
         <div className={styles.txt}>
           {'index.html hengheng heng lllhhhhhhh hh'} {module()}
           <button onClick={this.handleClick}>click</button>
-          {/* <img src={img} /> */}
           {imgsrc && <img src={imgsrc} height={6200} />}
         </div>
       </div>
