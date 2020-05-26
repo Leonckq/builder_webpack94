@@ -4,10 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "assert": "^2.0.0",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
     "ignore-loader": "^0.1.2",
     "postcss-loader": "^3.0.0",
     "px2rem-loader": "^0.1.9"
@@ -17,6 +20,12 @@
     "dev": "webpack-dev-server --config ./lib/webpack.dev.js",
     "build": "npx webpack --progress --colors --config ./lib/webpack.prod.js",
     "test": "istanbul cover ./node_modules/.bin/_mocha"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
   },
   "dependencies": {
     "@babel/core": "^7.4.4",
