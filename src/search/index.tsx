@@ -1,4 +1,4 @@
-// import styles from './search.module.less'
+import styles from './search.module.less'
 // import img from './../images/1.png'
 // console.log(styles)
 
@@ -19,7 +19,7 @@ class App extends PureComponent<Props, State> {
   }
   render() {
     return (
-      <div>
+      <div className="txt">
         {'Search Text'} {module()}
         <div>{/* <img src={img} /> */}</div>
       </div>

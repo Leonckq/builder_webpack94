@@ -23,7 +23,7 @@ class App extends PureComponent<Props, State> {
   constructor(props: Readonly<Props>) {
     super(props)
     this.state = {
-      imgsrc: 'sas',
+      imgsrc: '',
       count: ''
     }
   }

@@ -9,21 +9,26 @@
     "assert": "^2.0.0",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
+    "hard-source-webpack-plugin": "^0.13.1",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
     "ignore-loader": "^0.1.2",
+    "image-webpack-loader": "^6.0.0",
     "postcss-loader": "^3.0.0",
+    "purgecss-webpack-plugin": "^2.2.0",
     "px2rem-loader": "^0.1.9",
     "speed-measure-webpack-plugin": "^1.3.3",
+    "terser-webpack-plugin": "^3.0.2",
     "thread-loader": "^2.1.3",
     "webpack-bundle-analyzer": "^3.8.0"
   },
   "scripts": {
     "start": "npx webpack --progress --colors --config ./lib/webpack.base.js",
-    "dev": "webpack-dev-server --config ./lib/webpack.dev.js",
+    "dev": "webpack-dev-server --progress --colors --config ./lib/webpack.dev.js",
     "build": "npx webpack --progress --colors --config ./lib/webpack.prod.js",
     "test": "istanbul cover ./node_modules/.bin/_mocha",
-    "build:stats": "npx webpack --progress --colors --config ./lib/webpack.prod.js > stats.json"
+    "build:stats": "npx webpack --progress --colors --config ./lib/webpack.prod.js > stats.json",
+    "dll": "webpack --progress --colors --config ./lib/webpack.dll.js"
   },
   "husky": {
     "hooks": {
@@ -80,5 +85,8 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-html-plugin": "^0.1.1",
     "webpack-merge": "^4.2.2"
-  }
+  },
+  "sideEffects": [
+    "./src/**/*.less"
+  ]
 }
